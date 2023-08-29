@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">-->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<!--    <script src="scripts.js">-->
+    <title>Title</title>
+
+    {% block head %}
+    {% endblock head %}
+
+    <style>
+    .definition {
+        color: RoyalBlue;
+        font-weight: bold;
+        background-color: white;
+        }
+
+    h2 {
+    color: RoyalBlue;
+    }
+
+    p {
+    font-size: 16px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand"href="{{url_for('index')}}">GunsJustTheData</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('national')}}">National Trends</a></li>
+            <li><a href="{{url_for('size')}}">The Big Picture</a></li>
+            <li><a href="{{url_for('state')}}"> State Trends </a></li>
+            <li><a href="{{url_for('urban')}}"> Urbanization Categories</a> </li>
+            <li><a href="{{url_for('mass')}}">Mass Shootings </a> </li>
+            <li><a href="{{url_for('corr')}}">Related Factors</a> </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block content %}
+    {% endblock content %}
+</body>
+
+</html>

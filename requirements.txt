@@ -1,0 +1,6 @@
+altair==5.0.0rc1
+flask
+numpy
+pandas==1.4.4
+yellowbrick
+gunicorn==20.0.4

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+    color: white;
+    background-color: white;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    color: blue;
+    background-color: white;
+}
+
+h2 {
+    color: blue
+}
+
+div.imagehead{
+
+}
+
+#scale {
+    background-color: white:
+    width: 500px;
+    height: 400px;
+    text-align: right
+}
+
+
+.tableauPlaceholder {
+    height: 40%; width: 50%
+}
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+
+mark.green {
+    color:#228B22;
+    background: none;
+}
+
+container > div {
+    padding: 20px;
+    margin: 20px;
+}
+
+h2 {
+color: RoyalBlue;
+}
+
+.definition {
+    color: RoyalBlue;
+    font-weight: bold;
+    background-color: white;
+}

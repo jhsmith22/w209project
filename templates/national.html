@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+<head>
+{% block head %} {% endblock head %}
+
+</head>
+
+<body>
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">National Trends</li>
+  </ol>
+    </nav>
+
+    <div class="jumbotron" style="background-color: RoyalBlue; color: white; text-align: center">
+  <h1>National Trends</h1>
+</div>
+
+
+   <div class="container-fluid">
+
+       <p>Gun violence and firearm deaths in the US is a complex issue. While exploring this data, we hope viewers gain an understanding of the different types of violence and deaths. The common element to the violence and deaths are guns. But the causes are different, and that means the solutions should be too.
+
+Scroll down the page for a series of dashboards that describe national trends in firearm deaths and crime from 1981 or 1999 to 2020.
+</p>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Firearm Deaths per 100k (1981-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This depicts the firearm deaths per 100k people from 1981 to 2020. You will notice a 29% decrease from 1994 to 2000. There is also a gradual increase in firearm deaths from 2000 to 2017 and then a 12.73% spike from 2019 to 2020. The spike in 2020 was during the COVID-19 pandemic and was one of the largest single year increases in more than a century (Gramlich, J. (2021). What we know about the increase in U.S. murders in 2020. Pew Research Center).
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+<div class='tableauPlaceholder' id='viz1681748653001' style='position: relative'><noscript><a href='#'><img alt='Firearm Deaths per 100k people (1981-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Year_PC3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Exploratory_GunViolence&#47;Year_PC3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Year_PC3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681748653001');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h2>US Crimes by Crime Type per 100k (1981-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This is an overall count of crimes by crime type from 1981-2020. Property crime and larceny remain the highest types during the past four decades. The category, firearm deaths, is 7th making it relatively lower compared to other types of crimes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+<div class='tableauPlaceholder' id='viz1681748754326' style='position: relative'><noscript><a href='#'><img alt='US Crimes by Crime Type per 100k people (1981-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Crime3_&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Exploratory_GunViolence&#47;Crime3_' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Crime3_&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681748754326');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+           <div class="row">
+
+        <div class="col-sm-12">
+            <h2> Firearm Deaths by Type per 100k (1981-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This depicts firearm deaths by type from 1981-2020. More people in the US die from suicides involving a firearm than homicides or accidents.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+            <div class='tableauPlaceholder' id='viz1681748841326' style='position: relative'><noscript><a href='#'><img alt='Firearm Deaths by Type per 100k people ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Type_PC2_1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Exploratory_GunViolence&#47;Type_PC2_1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Type_PC2_1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681748841326');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+        <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Firearm Deaths Crude Rate by Race (1999-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>Not Hispanic or Latino have the highest firearm deaths. There are 20% more firearm deaths among White demographics than Black or African American populations. The combination of Not Hispanic or Latino, White demographics, and Black or African American populations have 85% more firearm deaths than Hispanic or Latino, Asian or Pacific Islander, and American Indian or Alaskan Native.
+                    </p>
+                    </br>
+                    <p  style="font-style: italic">Note: This dataset is only available from 1999-2020 because the CDC had not previously captured race options that include: Asian or Pacific Islander,  American Indian or Alaskan Native, Hispanic or Latino, and Not Hispanic or Latino (Source: 1997 Revisions to the Standards for the Classification of Federal Data on Race and Ethnicity).  We acknowledge this dataset does not comprehensively capture diverse racial and ethnic groups.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+            <div class='tableauPlaceholder' id='viz1681748963483' style='position: relative'><noscript><a href='#'><img alt='Firearm Death Crude Rate by Race (1999-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fi&#47;firearm_suicide_99-20&#47;firearm_race&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='firearm_suicide_99-20&#47;firearm_race' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fi&#47;firearm_suicide_99-20&#47;firearm_race&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681748963483');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+        <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Firearm Deaths by Age per 100k (1981-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This graph shows firearm deaths by age range from 1981-2020. The majority of firearm deaths are in the 20-34 age bracket.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+            <div class='tableauPlaceholder' id='viz1681749139722' style='position: relative'><noscript><a href='#'><img alt='Firearm Deaths by Age per 100k people (1981-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Age_PC2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Exploratory_GunViolence&#47;Age_PC2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Age_PC2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681749139722');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+               <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Sum of Firearm Deaths by Gender per 100k (1981-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>This bar graph shows the sum of firearm deaths by gender per 100k people from 1981-2020. Male firearm deaths are 141% higher than females. </p>
+                        </br>
+               <p style="font-style: italic">Note: the CDC did not collect gender identities other than male or female during this timeframe. We acknowledge this dataset does not fully capture diverse gender identities. </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+<div class='tableauPlaceholder' id='viz1681749458081' style='position: relative' height="50%"><noscript><a href='#'><img alt='Sum of Firearm Deaths By Gender per 100k people (1981-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Gender_bar&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Exploratory_GunViolence&#47;Gender_bar' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;Exploratory_GunViolence&#47;Gender_bar&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1681749458081');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+
+
+    </div>
+
+
+   </div>
+{% endblock content %}
+</body>

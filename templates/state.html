@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+<head>
+    {% block head %}
+
+<!--    OBSERVABLE-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+<!--    ALTAIR JESS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    {% endblock head %}
+</head>
+
+<body>
+    {% block content %}
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">State Trends</li>
+  </ol>
+    </nav>
+
+            <div class="jumbotron" style="background-color: RoyalBlue; color: white; text-align: center">
+  <h1>State Trends</h1>
+</div>
+
+
+
+    <div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Death Rates by State (1999-2020)</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>Do firearm deaths vary across states? How does a state's firearm death rate compare to the US average? Using CDC data on Firearm Deaths from 1999-2020, this visualization shows a set of charts for each state. The top three show the maximum mean average, and minimum firearm death rate for each state during these two decades. Below the three indicators/scorecards is a line chart that shows the firearm death rate of a selected state against the US average. The chart to the right of the line chart is a density chart that shows the density of firearm death rates during these two decades for the state of interest.
+
+Use the below filter to select an individual state of interest</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+            <div id="observablehq-viewof-statesFilter-6c45d618"></div>
+            <div id="observablehq-legend-6c45d618"></div>
+            <div id="observablehq-grid1-6c45d618"></div>
+            <div id="observablehq-viewof-plots-6c45d618"></div>
+      </div>
+    </div>
+    </div>
+
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/4db8d6439cdd3a89.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof statesFilter") return new Inspector(document.querySelector("#observablehq-viewof-statesFilter-6c45d618"));
+  if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-6c45d618"));
+  if (name === "grid1") return new Inspector(document.querySelector("#observablehq-grid1-6c45d618"));
+  if (name === "viewof plots") return new Inspector(document.querySelector("#observablehq-viewof-plots-6c45d618"));
+  return ["filtered_data","line_colors","mean_death_rate","max_death_rate_state","min_death_rate_state","viewof density_plot"].includes(name);
+});
+</script>
+
+<!--    <h1>State Trends</h1>-->
+<!--    <h2>Death Rates by State, 1999-2020</h2>-->
+<!--     <div class="well"> Does firearm deaths vary across states? How does the most current death rate in 2020 compare to historical trends? This visualization shows a set of tiny charts for each state using CDC data on Firearm Deaths from 1999-2020.  </div>-->
+
+<!--        <div id="observablehq-viewof-stateSelector-1e29edba"></div>-->
+<!--        <div id="observablehq-tiny_charts-1e29edba"></div>-->
+<!--        <script type="module">-->
+<!--        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";-->
+<!--        import define from "https://api.observablehq.com/d/57e798aaa11104ab.js?v=3";-->
+<!--        new Runtime().module(define, name => {-->
+<!--          if (name === "viewof stateSelector") return new Inspector(document.querySelector("#observablehq-viewof-stateSelector-1e29edba"));-->
+<!--          if (name === "tiny_charts") return new Inspector(document.querySelector("#observablehq-tiny_charts-1e29edba"));-->
+<!--        });-->
+<!--        </script>-->
+
+{% endblock content %}
+</body>

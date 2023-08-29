@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+{% endblock head %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url_for('index')}}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Urbanization Categories</li>
+  </ol>
+</nav>
+
+<div class="jumbotron" style="background-color: RoyalBlue; color: white; text-align: center">
+  <h1>Urbanization Categories</h1>
+</div>
+
+
+
+<div class="container-fluid">
+
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h2>Firearm Death Rates in Urban and Rural Areas</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>How do firearm death rates differ across urban and rural areas in the United States? We can use CDC data to categorize regions across the United States as rural or urban. From 1999 to 2020, we can see that the average firearm death rate in urban and rural areas has shifted over time. Rural regions consistently have a higher average firearm death rate than urban areas.
+                    Within rural and urban areas, the CDC breaks out these areas into six urbanization categories: NonCore, Micropolitan, Small Metro, Medium Metro, Large Fringe Metro, and Large Central Metro. Micropolitan and NonCore urbanicity areas are considered rural, while the other four are considered urban. When we further breakout out these areas into these six urbanization sub-categories, we can see that while the rural urbanicity tends to have higher average death rates, Large Central Metro does have more yearly fluctuation and will sometimes have a higher average firearm death rate compared to the two rural urbanicity.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+          <div id="observablehq-viewof-layers-bedf79c0"></div>
+          <div id="observablehq-legend-bedf79c0"></div>
+          <div id="observablehq-chart_draft-bedf79c0" style="height: 50%; width: 50%"></div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Heatmap of Firearm Death Rates by State and Urbanization Category</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>It is important to note that not all states have every urbanization category, which we can see in the heatmap below. State and Urbanization Categories are mapped to the x and y axes, and the average firearm death rate at each combination of those variable values is mapped to the color. The darker the color, the higher the average firearm death rate. If there is white space at one combination of those variables, this indicates that this type of urbanization category does not exist in a particular state. From the heatmap below, year-over-year, we see state outliers within each urbanization category, especially in the Large Central Metro areas.
+                        Click on the below filter to see how the data looks for each year.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12" >
+        <div id="observablehq-viewof-i-1d597c6d"></div>
+        <div id="observablehq-viewof-heatmap-1d597c6d"></div>
+      </div>
+    </div>
+
+        <div class="row">
+        <div class="col-sm-12">
+            <h2>Variance and Outliers of Firearm Death Rates Among Urban and Rural Areas</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p>As hinted in the above heatmap, we see some variance and outliers in the data across urbanization categories. Below are a box and whisker plot and a dumbbell plot to show the variance and outliers in firearm death rate. The box and whisker plot shows how the data is distributed within each urbanization category. We can see that within the Large Central Metro urbanicity, there are outliers within the data and a larger variance.
+In the dumbbell plot, We can see how margin of the average firearm death rate between urban and rural areas. While firearm death rates are generally higher in rural areas, when we break it down to the state level, this is not always the case in each state. Additionally, some states have a closer margin in firearm death rates between rural and urban areas, while others have much longer distances between rural and urban firearm death rates.
+Click on the below filter to see how the data looks for each year.</p>
+            </div>
+        </div>
+    </div>
+            </div>
+
+    <div class="row">
+      <div class="col-sm-12" >
+            <div class='tableauPlaceholder' id='viz1681328003884' style='position: relative'><noscript><a href='#'><img alt='outliers and variance ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;w2&#47;w209_final_project_viz1&#47;outliersandvariance&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='w209_final_project_viz1&#47;outliersandvariance' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;w2&#47;w209_final_project_viz1&#47;outliersandvariance&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+      </div>
+    </div>
+      </div>
+
+
+
+       <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/127cd2f295bc532e.js?v=3";
+        new Runtime().module(define, name => {
+          if (name === "viewof layers") return new Inspector(document.querySelector("#observablehq-viewof-layers-bedf79c0"));
+          if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-bedf79c0"));
+          if (name === "chart_draft") return new Inspector(document.querySelector("#observablehq-chart_draft-bedf79c0"));
+        });
+        </script>
+
+
+        <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/127cd2f295bc532e.js?v=3";
+        new Runtime().module(define, name => {
+          if (name === "viewof i") return new Inspector(document.querySelector("#observablehq-viewof-i-e0c44972"));
+          if (name === "heatmap_chart") return new Inspector(document.querySelector("#observablehq-heatmap_chart-e0c44972"));
+        });
+        </script>
+
+
+
+
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1681328003884');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/127cd2f295bc532e.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof i") return new Inspector(document.querySelector("#observablehq-viewof-i-1d597c6d"));
+  if (name === "viewof heatmap") return new Inspector(document.querySelector("#observablehq-viewof-heatmap-1d597c6d"));
+});
+</script>
+{% endblock content %}

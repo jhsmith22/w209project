@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+
+<head>
+{% block head %}
+  {% endblock head %}
+</head>
+
+<body>
+{% block content %}
+
+<div class="jumbotron" style="background-color: RoyalBlue; color: white; text-align: center">
+  <h1 >A new look at gun violence in the United States</h1>
+  <p>Just the data, none of the politics</p>
+</div>
+
+
+<div class="container">
+<!--  <h2 style="">Contents</h2>-->
+
+  <div style="">
+    <div class="row" >
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('national')}}">
+              <img class="card-img-top" src="{{ url_for('static', filename='national_trends.jpg') }}" alt="National Trends" style="width: 60%; height: 60%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">National Trends</h5>
+            <p class="card-text">See how firearm deaths vary across time and demographics in the United States.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('size')}}">
+            <img class="card-img-top" src="{{ url_for('static', filename='zoomout.png') }}" alt="The Big Picture" style="width: 50%; height: 50%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">The Big Picture</h5>
+            <p class="card-text">Zoom out to understand the broader role of firearms in deaths overall, suicide, and homicide.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('mass')}}">
+            <img class="card-img-top" src="{{ url_for('static', filename='group.png') }}" alt="Mass Shootings" style="width: 50%; height: 50%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Mass Shootings</h5>
+            <p class="card-text">View data on all mass shootings since 1966</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('urban')}}">
+              <img class="card-img-top" src="{{ url_for('static', filename='city2.png') }}" alt="Explore Differences by Urbanization Categories" style="width: 60%; height: 60%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Trends by Urbanization Category</h5>
+            <p class="card-text">Explore differences by urbanization category and by state</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('state')}}">
+            <img class="card-img-top" src="{{ url_for('static', filename='map.png') }}" alt="The Big Picture" style="width: 60%; height: 60%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">State Trends</h5>
+            <p class="card-text">Compare gun violence across states.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <a href="{{url_for('corr')}}">
+            <img class="card-img-top" src="{{ url_for('static', filename='correlation.png') }}" alt="Potential Related Factors" style="width: 60%; height: 60%;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Related Factors</h5>
+            <p class="card-text">Explore how gun deaths vary with possible related factors by state: gun ownership, gun laws.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<h2 style="text-align: center; padding: 20px; color: RoyalBlue ">Definitions</h2>
+
+    <ul class="list-group">
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Firearm Death:</mark>
+        The CDC includes the following as part of firearm deaths:
+        Homicide, Suicide, Unintentional, Legal intervention/operations of war, and Undetermined injury from a firearm.</li>
+       <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Injury Death:</mark>
+        The CDC includes the following as part of injury deaths: Cut/Piercing, Drowning, Fire/Flame, Firearm, Other land transport, Poisoning, Suffocation, or Other or Unspecified.</li>
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Mass Shooting:</mark>
+        The Violence Project uses the following definition for a mass shooting: “…a multiple homicide incident in which four or more victims are murdered with firearms—not including the offender(s)—within one event, and at least some of the murders occurred in a public location or locations in close geographical proximity (e.g., a workplace, school, restaurant, or other public settings), and the murders are not attributable to any other underlying criminal activity or commonplace circumstance (armed robbery, criminal competition, insurance fraud, argument, or romantic triangle).”
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Deaths Per 100,000 Capita:</mark>
+        We present death rates as per 100,000 capita when comparing data across time or across states so there is an apples-to-apples comparison for death rates. This is necessary because population size varies across time and across states. This means we divide by the respective population size in a given year or a given state, as relevant.
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Not Hispanic or Latino:</mark>
+        Refers to Americans who are classified by the United States Census as "white" and are not of Hispanic heritage (Bureau, U.S. Census. "U.S. Census website". United States Census Bureau. Retrieved 19 August 2017.)
+       <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Cook's Distance:</mark>
+       Statistical method used to detect outliers in Ordinary Least Squares regression. The method is further described in this documentation: https://www.scikit-yb.org/en/latest/api/regressor/influence.html </li>
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Restrictive and Permissive Gun Laws:</mark>
+      The RAND gun law database classifies whether each state's gun law had a permissive or restrictive effect relative to the legal regime prior to the implementation. If the new law imposes greater restrictions on gun access or use, they categorize
+it as having a restrictive effect. If it eases access or use restrictions, they categorize it as having a permissive effect"
+      <li class="list-group-item"><mark class="definition" style="color: RoyalBlue; font-weight: bold; background-color: white;">Gun Policy Permissiveness Score</mark>
+      We aggregate the gun laws for each state into an aggregate "Gun Policy Permissiveness Score" using the law classifications from the RAND gun law database.
+      RAND assesses each law as either "permissive" or "restrictive." We assign each permissive law with 2 points, each restrictive law with -2 points, and assign 1 point if no law exists in that category.
+      RAND breaks out each law class for its application to handguns and long guns, and we assign points accordingly. For example, if a state had restrictive background check laws for handguns and for long guns, that totals -4 points (-2 for handguns and -2 for long guns).
+      We also apply our own weights from 1 to 5 to the different law classes, to represent the estimated relative importance of each law class in affecting gun use.
+      We assign registration a 5, as the most impactful law class.
+      We assign carrying a concealed weapon (ccw), Castle Doctrine, and permit to purchase a 3.
+      We assign firearm sales restrictions a 2.
+      We assign background checks, open carry, safety training, and local laws preempted a 1, as the least impactful law classes.
+    </ul>
+
+    <h2 style="text-align: center; padding: 20px; color: RoyalBlue ">Key Data Limitations</h2>
+<ul>
+  <li>We do not have data on firearm injuries. Firearm injuries are an important part of understanding the full impact of gun violence in the United States. We will continue to seek out reliable sources of gun injuries for future releases. </li>
+</ul>
+
+<div class="container">
+  <h2 style= "text-align: center; color: RoyalBlue ">Our Data</h2>
+
+<div class="row" style="padding-top: 20px">
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+         <img src="{{ url_for('static', filename='cdc-logo.jpg') }}" class="card-img-top" alt="CDC" style="width: 30%; height: 30%; border-radius: 8px;">
+        <div class="card-body">
+          <h5 class="card-title">Centers for Disease Control</h5>
+            <p class="card-text">The CDC Wonder Database provides cause of death data from 1999 - 2020</p>
+            <a href="https://wonder.cdc.gov/ucd-icd10.html" class="btn btn-primary">CDC Wonder</a>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+         <img src="{{ url_for('static', filename='violenceproject.png') }}" class="card-img-top" alt="CDC" style="width: 40%; height: 40%;">
+        <div class="card-body">
+          <h5 class="card-title">The Violence Project</h5>
+            <p class="card-text">Record of all mass public shootings 1966 to present</p>
+            <a href="https://www.theviolenceproject.org/mass-shooter-database/" class="btn btn-primary">Violence Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+         <img src="{{ url_for('static', filename='rand-logo.png') }}" class="card-img-top" alt="RAND" style="width: 40%; height: 40%;">
+        <div class="card-body">
+          <h5 class="card-title">Rand</h5>
+            <p class="card-text">Estimates of gun ownership rates (survey from 2016) and all gun laws passed at the state-level (through 2022)</p>
+            <div style="padding-bottom:10px">
+              <a href="https://www.rand.org/research/gun-policy/gun-ownership.html" class="btn btn-primary">Gun ownership in America</a>
+            </div>
+            <div>
+              <a href="https://www.rand.org/pubs/tools/TLA243-2-v2.html" class="btn btn-primary">Firearm Law Database</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+         <img src="{{ url_for('static', filename='fbilogo.jpeg') }}" class="card-img-top" alt="FBI" style="width: 40%; height: 40%;">
+        <div class="card-body">
+          <h5 class="card-title">FBI</h5>
+            <p class="card-text">Crime data in the United States from 1980-2020</p>
+            <div>
+              <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home" class="btn btn-primary">FBI Crime Data Explorer</a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h4>Image credits</h4>
+
+  <ul>
+  <li><a href="https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/1e/f7/fd/us-state-map.jpg">Map Image</a></li>
+      <li><a href="https://cdn.onlinewebfonts.com/svg/img_154952.png">Big Picture Image</a></li>
+      <li><a href="http://images.clipartpanda.com/people-Vector_People_000027.jpg">Mass Shooting Image</a></li>
+      <li><a href="http://searchengineland.com/wp-content/seloads/2015/10/graph-line-trend-analytics-magnifying-glass-ss-1920.jpg">National Trends Image</a></li>
+      <li><a href="http://www.clipartbest.com/cliparts/jTx/6eq/jTx6eqGec.png">Urbanization Category Image</a></li>
+      <li><a href="https://static.thenounproject.com/png/1569699-200.png">Related Factors Image</a></li>
+</ul>
+
+{% endblock content %}
+</body>
